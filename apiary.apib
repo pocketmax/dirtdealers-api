@@ -1074,92 +1074,60 @@ This is where you can delete an offer
 
 ### Create a contact [POST]
 
-This is where you can create an offer
+This is where you can create a contact
 
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "firstName": "Foo",
+            "lastName": "Bar"
         }
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Location: /contacts/123
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                data: {
+                    id: "123",
+                    firstName: "Foo",
+                    lastName: "Bar"
+                },
+                success: true
             }
 
-## Modify a pre-existing contact [/contacts/{contactId}]
+## Modify a pre-existing contact [/contacts/{id}]
 
 ### Update a contact [PATCH]
 
-This is where you can update a pre-existing offer
+This is where you can update a pre-existing contact
 
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            firstName: "FooFoo",
+            lastName: "Bar"
         }
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Location: /contacts/123
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                data: {
+                    id: "123",
+                    firstName: "Foo",
+                    lastName: "Bar"
+                },
+                success: true
             }
 
 ### Delete a contact [DELETE]
@@ -1172,29 +1140,7 @@ This is where you can delete a contact
 
     + Headers
 
-            Location: /questions/2
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
+            Location: /contacts/123
 
 # group Street Addresses
 
